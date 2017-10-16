@@ -1,0 +1,65 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: url("skulls.png");
+  background-attachment: fixed;
+  background-color: #F1FFE7;
+}
+
+.alert {
+  margin-bottom: 1px;
+}
+
+.group {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+label {
+  display: block;
+  position: relative;
+  padding-left: 2px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.jumbotron {
+  background: url("tree.png");
+  color: #F1FFE7;
+  text-shadow: 2px 2px 5px black;
+  background-color: #00A6FB;
+  border: 1px solid #00A6FB;
+}
+
+.panel-info>.panel-heading {
+  background: url("texture.png");
+  background-color: #00A6FB;
+  color: white;
+}
+
+.panel-title {
+  font-size: 20px;
+}
+
+.panel-info {
+  //border-color: #3626A7;
+  //background-color: #F1FFE7;
+  background-color: rgba(66, 137, 255, 0.1);
+  margin: 5% 0px;
+}
+
+.alert-success {
+  background-color: #9eff9b;
+}
+
+.alert-danger {
+  background-color: #ffa09b;
+}

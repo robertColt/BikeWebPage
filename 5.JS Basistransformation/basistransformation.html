@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Basistransformation</title>
+  <!-- Bootstrap link -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <style type="text/css">
+  .result{
+    margin-top: 20px;
+  }
+    #zahl{
+      margin:auto;
+      width : 25%;
+    }
+
+    body{
+      height: 100%;
+      width: 100%;
+      background: url(skulls.png);
+      background-color: #F1FFE7;
+    }
+
+    .jumbotron{
+      margin-top: 0%;
+      padding: 100px 40px;
+      color:white;
+      background: url(iron-grip.png);
+      background-color: #00A6FB;
+
+    }
+
+    .btn-primary{
+      color: black;
+      background-color: #9EFF9B;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <h1>Jede Zahl aus Basis 10 zu Basis 2 und 16</h1>
+  <p>Bitte Zahl in Basis 10 unten eingeben</p>
+    <div class="form-group">
+    <input id="zahl" class="form-control" type="number" step="0.1" min="0" placeholder="Hier Zahl eingeben"/>
+      </div>
+    <button value="Berechnen" class="btn btn-primary" onclick="transform()">Berechnen</button>
+    <div class="result">
+      <p id="result2"></p>
+      <p id="result16"></p>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+function transform(){
+  var number = document.getElementById("zahl").value;
+  var numberDecimal, numberInteger;//reeler Teil und ganzer Teil der Zahl
+  numberInteger = parseInt(number);
+  numberDecimal = number - numberInteger;
+
+  var base2="", base16="";
+  var aux = numberInteger;
+
+  //ganzen Teil der Zahl transformieren in:
+  // --Basis 2
+  while(aux>0){
+    console.log(aux);
+    base2 += parseInt(aux%2);
+    aux = parseInt(aux/2);
+  }
+  //--Basis 16
+  while(numberInteger>0){
+    console.log(numberInteger);
+    aux = parseInt(numberInteger%16);
+
+    switch (aux) {
+      case 10: base16+="A";break;
+      case 11: base16+="B";break;
+      case 12: base16+="C";break;
+      case 13: base16+="D";break;
+      case 14: base16+="E";break;
+      case 15: base16+="F";break;
+      default: base16+= aux;break;
+    }
+    numberInteger = parseInt(numberInteger/16);
+  }
+
+  //String invertieren
+  base2 = base2.split("").reverse().join("");
+  base16 = base16.split("").reverse().join("");
+  //Komma nach dem ganzen Teil einfuegen
+  base2 += ".";
+  base16 += ".";
+
+  //Reeler Teil der Zahl transformieren mit 4 Nachkommastellen
+  //Basis 2
+  aux = numberDecimal;
+  for(var i = 0; i<4; i++){
+    aux = aux*2;
+    base2 += parseInt(aux%2);
+  }
+  for(var i = 0; i<4; i++){
+    numberDecimal *= 16;
+    switch (parseInt(numberDecimal%16)) {
+      case 10: base16+="A";break;
+      case 11: base16+="B";break;
+      case 12: base16+="C";break;
+      case 13: base16+="D";break;
+      case 14: base16+="E";break;
+      case 15: base16+="F";break;
+      default: base16+= parseInt(numberDecimal%16);break;
+    }
+  }
+
+  //Das Ergebnis in der Webseite schreiben und in alert ausgeben
+  document.getElementById("result2").innerHTML = ("Zahl in Basis 2 : " + base2);
+  document.getElementById("result16").innerHTML = ("Zahl in Basis 16 : " + base16);
+  alert("Zahl in Basis 2 : " + base2+ "\nZahl in Basis 16 : "+base16);
+}
+</script>
+<script src="http://localhost:35729/livereload.js">
+
+</script>
+
+</body>
+
+</html>

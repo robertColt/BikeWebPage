@@ -1,0 +1,112 @@
+/*
+//mercedes.html
+*/
+.mercedes-body{
+  background: url(mercedes-logo.jpg);
+  background-size: cover;
+  background-position: center;
+  color:white;
+  text-shadow: 5px 5px 5px black;
+  font-family: Comfortaa, cursive;
+  background-attachment: fixed;
+}
+
+/*
+//bmw.html
+*/
+.bmw-body{
+  background: url(bmw-logo.jpg);
+  background-size: cover;
+  background-position: center;
+  color:white;
+  text-shadow: 5px 5px 5px black;
+  font-family: Comfortaa, cursive;
+  background-attachment: fixed;
+}
+
+/*
+//audi.html
+*/
+.audi-body{
+  background: url(audi-logo.jpg);
+  background-size: cover;
+  background-position: center;
+  color:white;
+  text-shadow: 5px 5px 5px black;
+  font-family: Comfortaa, cursive;
+  background-attachment: fixed;
+}
+
+#list-element{
+  color:black;
+  text-shadow: none;
+  font-size:3vw;
+  background : rgba(255,255,255,0.9);
+}
+.badge{
+  font-size: 3vw;
+}
+
+.list-group{
+    margin-top: 3vw;
+}
+
+/*
+------------
+//index.html
+------------
+*/
+#the_body{
+  background: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  color:white;
+  text-shadow: 5px 5px 5px black;
+  font-family: Comfortaa, cursive;
+  background-attachment: fixed;
+}
+
+html{
+  height:100%;
+}
+
+h3{
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+  margin-bottom:30px;
+  text-align:center;
+}
+#user{
+  padding-right: 30px;
+}
+#home {
+  font-size:20px;
+  text-align: center;
+  color:white;
+}
+.home{
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#content{
+  text-align: center;
+  background : rgba(255,255,255,0.1);
+}
+.thumbnail{
+  padding:0px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+}
+
+
+.caption{
+  text-align: center;
+}
+
+hr{
+  margin:10px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}

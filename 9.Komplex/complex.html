@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Complex numbers</title>
+  <!-- Bootstrap link -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <style type="text/css">
+  .result{
+    margin-top: 20px;
+    color:#F1FFE7;
+  }
+  .zahl{
+    margin:auto;
+    width : 25%;
+  }
+
+  .input{
+    display:block;
+  }
+
+  .form-group{
+    display:inline;
+  }
+
+  .btn{
+    margin-top: 10px;
+  }
+
+
+      body{
+        height: 100%;
+        width: 100%;
+        background: url(skulls.png);
+        background-color: #F1FFE7;
+      }
+
+      .jumbotron{
+        margin-top: 0%;
+        padding: 100px 40px;
+        color:white;
+        background: url(iron-grip.png);
+        background-color: #00A6FB;
+
+      }
+
+      .btn-primary{
+        color: black;
+        background-color: #9EFF9B;
+      }
+
+
+  </style>
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <h1>Addition, Subtraktion, Multiplikation, Division mit Komplexen Zahlen</h1>
+  <p>Bitte Zahlen eingeben :</p>
+  <form class="form-inline" >
+
+  </form>
+  <div class = "input">
+    <div class="form-group form-inline">
+      z =
+      <input id="zahl1-rl" class="zahl form-control" type="number" step="0.1" min="0" placeholder="Reeler Teil erste Zahl"/>
+      <input id="zahl1-img" class="zahl form-control" type="number" step="0.1" min="0" placeholder="Img. Teil erste Zahl"/>
+    </div>
+    <br>
+    <div class="form-group form-inline">
+      x =
+      <input id="zahl2-rl" class="zahl form-control" type="number" step="0.1" min="0" placeholder="Reeler Teil zweite Zahl"/>
+      <input id="zahl2-img" class="zahl form-control" type="number" step="0.1" min="0" placeholder="Img. Teil zweite Zahl"/>
+    </div>
+    <br>
+    <button value="Berechnen" class="btn btn-primary" onclick="calculate()">Berechnen</button>
+    <div class="result">
+      <p id="result-add"></p>
+      <p id="result-sub"></p>
+      <p id="result-mul"></p>
+      <p id="result-div"></p>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+function calculate(){
+  //erste zahl
+  var a = parseFloat(document.getElementById("zahl1-rl").value); //real
+  var b = parseFloat(document.getElementById("zahl1-img").value);//imaginary
+
+  //zweite zahl
+  var c = parseFloat(document.getElementById("zahl2-rl").value);//real
+  var d = parseFloat(document.getElementById("zahl2-img").value);//imaginary
+
+  var im, re;
+
+  //Das Ergebnis in der Webseite schreiben
+  //add
+  re = a+c;
+  im = b+d;
+  var sign = im<0 ? "" : "+";
+  document.getElementById("result-add").innerHTML = ("z + x : " + re.toFixed(2) +" "+ sign+" " + im.toFixed(2) + "*i");
+
+  //subtract
+  re = a-c;
+  im = b-d;
+  sign = im<0 ? "" : "+";
+  document.getElementById("result-sub").innerHTML = ("z - x : " + re.toFixed(2) +" "+ sign+" " + im.toFixed(2) + "*i");
+
+  //multiply
+  re = a*c + b*d;
+  im = a*d + b*c;
+  sign = im<0 ? "" : "+";
+  document.getElementById("result-mul").innerHTML = ("z * x : " + re.toFixed(2) +" "+ sign+" " + im.toFixed(2) + "*i");
+
+  //divide
+  re = re/(c^2 + d^2);
+  im = (b*c - a*d)/(c^2 + d^2);
+  sign = im<0 ? "" : "+";
+  document.getElementById("result-div").innerHTML = ("z / x : " + re.toFixed(2) +" "+ sign+" " + im.toFixed(2) + "*i");
+}
+</script>
+
+</body>
+
+</html>

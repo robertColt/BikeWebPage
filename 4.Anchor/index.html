@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Autos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="the_body">
+  <!-- Container -->
+  <div class="container">
+    <!-- navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-navbar">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="index.html">
+              <span class="glyphicon glyphicon-home" aria-hidden="true">
+              </span> Home
+              </a>
+          </li>
+          <li><a href="audi.html">Audi</a></li>
+          <li><a href="bmw.html">BMW</a></li>
+          <li><a href="mercedes.html">Mercedes</a></li>
+        </ul>
+        <p id="user" class="navbar-text navbar-right">
+          Colt Robert
+        </p>
+      </div>
+    </div>
+
+    <!-- Welcome -->
+    <div class="jumbotron" id="content">
+      <h1>Welcome to my cars!</h1>
+      <p>Select a picture to take a look!</p>
+      <hr>
+    </div>
+
+    <!-- Pictures -->
+    <div class="row">
+      <div class="col-md-4  col-sm-6">
+        <a href="audi.html" class="thumbnail">
+            <img class="img-responsive"  src="audi.jpg">
+          </a>
+        <div class="caption">
+          <h3>Audi A5</h3>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <a href="mercedes.html" class="thumbnail">
+            <img class="img-responsive" src="mercedes.jpg">
+          </a>
+        <div class="caption">
+          <h3>Mercedes A-Class</h3>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <a href="bmw.html" class="thumbnail">
+            <img class="img-responsive"  src="bmw.jpg">
+          </a>
+        <div class="caption">
+          <h3>BMW M3</h3>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Welcome -->
+  <div class="home">
+    <button id="home" type="button" class="btn btn-link" onclick="location.href = 'index.html';">
+          <span class="glyphicon glyphicon-home" aria-hidden="true">
+          </span> Home</button>
+    <hr> Colt Robert
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+
+</html>
